@@ -8,8 +8,7 @@ io.on('connection', (socket) => {
         console.log('user disconnected');
     });
     socket.on('chatmessage', msg => {
-        // socket.broadcast.emit('message', msg);
-        // socket.emit('message', msg);
+
         io.emit('message', msg)
 
 
